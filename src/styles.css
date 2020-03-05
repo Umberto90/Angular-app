@@ -1,0 +1,6 @@
+/* Add application styles & imports to this file! */
+.ant-input-affix-wrapper .ant-input {
+    position: relative;
+    text-align: inherit;
+    /* min-height: 6%; */
+}

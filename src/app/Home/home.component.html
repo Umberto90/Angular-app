@@ -1,0 +1,93 @@
+<div *ngIf="!loading">
+  <div nz-row nzType="flex" nzJustify="center">
+    <div nz-col class="gutter-row" nzSpan="10">
+      <button routerLink="/login" >LOGOUT</button>
+    </div>
+    <div nz-col class="gutter-row" nzSpan="12">
+      <div style="font-weight:bold;    font-size:20px">Benvenuto {{nome}} </div>
+      </div>
+    </div>
+  <div>
+    <form style="padding:20px" nz-form [nzLayout]="'inline'" [formGroup]="myform">
+    <nz-form-item *ngFor="let index of formitems;index as i">
+        <div class="gutter-example">
+          <div nz-row nzGutter="16">
+              <div nz-col class="gutter-row" nzSpan="15">
+                <nz-form-control nzErrorTip="Please input your username!">
+                    <nz-input-group nzPrefixIcon="user">
+                      <input style="width:70%" formControlName="Control_{{i}}" nz-input placeholder="Control_{{i}}" />
+                    </nz-input-group>
+                </nz-form-control>
+              </div>
+              <div nz-col style="padding-top:5px" nzSpan="8">
+                <button nz-button nzType="primary" (click) = "myform.controls['Control_'+i].reset()">Reset form
+                </button>
+              </div>
+          </div>
+        </div>
+    </nz-form-item>
+    <div nz-row nzGutter="16">
+        <div nz-col style="padding-top:20px" nzSpan="10" nzOffset = "6">
+          <button nz-button nzType="danger" (click) = "submit_form()">Submit Form
+          </button>
+        </div>
+    </div>
+    </form>
+    <div  style="padding-top:25px" nz-row nzGutter="16" nzType="flex" nzJustify="center">
+        <nav style="padding:30px">
+          <button nz-button nzType="default" routerLink="/newpage" [queryParams]="{numero: num,percent: percent}">----------> NEXT PAGE</button>
+        </nav>
+    </div>
+  </div>
+
+  <ul>
+      <li *ngFor="let resultObj of result">
+        {{resultObj.title}}
+      </li>
+  </ul>
+
+  <nz-rate style="padding:50px" [(ngModel)]="value" [nzTooltips]="tooltips"></nz-rate>
+
+</div>  
+<div *ngIf="loading" class="container">
+    <div class="row">
+      <div id="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="loading"></div>
+         <p class="spinner-message" *ngIf="message && message !== ''">
+           {{message}}
+        </p>
+      </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+     
+     
+     
+
+
+
+
+

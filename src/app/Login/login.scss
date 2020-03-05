@@ -1,0 +1,19 @@
+.login-card-container{
+  width:320px;
+  height:400px;
+  border: 1px solid grey;
+  margin-bottom: 10px
+}
+
+@media only screen and (min-width: 600px) {
+  .login-card-container{
+   width:520px;
+   height:500px;
+}
+}
+
+.ant-input-affix-wrapper .ant-input {
+  position: relative;
+  text-align: inherit;
+  min-height: 2% !important;
+}

@@ -1,0 +1,55 @@
+<div [nzJustify]="center" nz-row style="padding-top:20px">
+      <div nz-col nzSpan="12" nzOffset="7" [nzXs]="{ span: 24, offset: 2 }" [nzLg]="{ span: 24, offset: 7 }">
+            <nz-card class="login-card-container">
+     <div nz-row style="padding-top:20px">
+            <div style="font-weight:bold;color:black;font-size:25px" nz-col nzSpan="24" nzOffset="10">
+              MY APP
+            </div>
+     </div>         
+     <div nz-row style="padding-top:20px">
+      <div nz-col nzSpan="15" [nzXs]="{ span: 24, offset: 2 }"
+      [nzLg]="{ span: 24, offset: 5 }">
+        <form (ngSubmit)="login_submit()" nz-form [nzLayout]="'inline'" [formGroup]="loginform">
+          <div nz-row style="padding-top:20px">
+            <div nz-col nzSpan="24" nzOffset="3">
+              <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your username!">
+                <nz-input-group nzPrefixIcon="user">
+                  <input formControlName="userName" nz-input placeholder="Username" />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            </div>
+         </div>
+    <div nz-row style="padding-top:20px">
+      <div nz-col nzSpan="24" nzOffset="3">
+         <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your username!">
+          <nz-input-group nzPrefixIcon="user">
+            <input formControlName="password" nz-input placeholder="Password" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      </div>
+    </div>
+    <div nz-row style="padding-top:20px">
+      <div nz-col nzSpan="24" [nzXs]="{ span: 11, offset: 7 }" [nzLg]="{ span: 6, offset: 6 }">
+        <nz-form-item>
+        <nz-form-control>
+          <button  
+           nz-button class="login-form-button" [nzType]="'primary'">Log in</button>
+        </nz-form-control>
+      </nz-form-item>
+      </div>
+    </div>
+    <div *ngIf = "errmess" nz-row [nzJustify]="center" style="padding-top:20px">
+      <div style="color:red;font-weight:bold" nz-col nzSpan="24" [nzXs]="{ span: 24, offset: 3 }" [nzLg]="{ span: 24, offset: 3 }">
+        Credenziali errate,riprovare!
+      </div>
+    </div>
+    </form>
+      </div>
+    </div>
+    </nz-card>
+      </div>
+</div>

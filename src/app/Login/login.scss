@@ -1,19 +1,28 @@
 .login-card-container{
-  width:320px;
-  height:400px;
+  width:440px;
+  height:700px;
   border: 1px solid grey;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  border-radius: 50px;
 }
 
-@media only screen and (min-width: 600px) {
-  .login-card-container{
-   width:520px;
-   height:500px;
-}
-}
 
 .ant-input-affix-wrapper .ant-input {
   position: relative;
   text-align: inherit;
   min-height: 2% !important;
+}
+
+.login-row{
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.body-login{
+  background-image:url(dist\demo\assets\bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

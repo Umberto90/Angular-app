@@ -18,7 +18,7 @@
     "antd": "3.26.8",
     "core-js": "2.6.11",
     "date-fns": "2.9.0",
-    "moment": "2.24.0",
+    "moment": "2.29.4",
     "moment-timezone": "0.5.28",
     "ng-zorro-antd": "8.5.2",
     "ng2-file-upload": "^1.4.0",
